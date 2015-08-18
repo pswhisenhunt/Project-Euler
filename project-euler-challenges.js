@@ -100,5 +100,20 @@ module.exports = {
     } else {
       return false;
     }
+  },
+
+  differenceOfSumOfSquares : function(number) {
+    var sumOfSquares = 0;
+    var squareOfSum = 0;
+    var sum = 0;
+    var difference = 0;
+    for (var i = 1; i <= number; i++) {
+      var iSquared = i * i;
+      sum += i;
+      sumOfSquares += iSquared;
+    }
+    squareOfSum = sum * sum;
+    difference = squareOfSum - sumOfSquares;
+    return difference;
   }
 }

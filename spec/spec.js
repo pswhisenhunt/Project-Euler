@@ -29,4 +29,11 @@ describe('Project Euler Challenges', function() {
       expect(ProjectEuler.largestPalindromeProduct(3)).toEqual(90909);
     });
   });
+
+  describe('Sum of squares', function() {
+    it('should return the difference of the sum of sqaures and the square of sums', function() {
+      expect(ProjectEuler.differenceOfSumOfSquares(10)).toEqual(2640);
+      expect(ProjectEuler.differenceOfSumOfSquares(100)).toEqual(25164150);
+    });
+  });
 });
