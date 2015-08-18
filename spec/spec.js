@@ -15,4 +15,11 @@ describe('Project Euler Challenges', function() {
       expect(ProjectEuler.evenFibonacciNumbers(8)).toEqual(44);
     });
   });
+
+  describe('Largest Prime Factor', function() {
+    it('should retrun the largest prime factor of a given number, n', function() {
+      expect(ProjectEuler.largestPrimeFactor(13195)).toEqual(29);
+      expect(ProjectEuler.largestPrimeFactor(25)).toEqual(5);
+    });
+  });
 });

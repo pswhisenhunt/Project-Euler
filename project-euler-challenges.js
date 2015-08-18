@@ -35,5 +35,40 @@ module.exports = {
       fibArray.push(prevIndex2);
     }
     return fibArray;
+  },
+
+  largestPrimeFactor: function(n) {
+    var i = 1;
+    var primeFactors = [];
+    while (i <= n) {
+      if (n % i === 0) {
+        if (this.checkPrime(i)) {
+          primeFactors.push(i);
+        }
+      }
+      i++
+    }
+
+    var greatestFactor = primeFactors[0];
+    for (var j = 0; j <= primeFactors.length-1; j++) {
+      if (greatestFactor < primeFactors[j]) {
+        greatestFactor = primeFactors[j];
+      }
+    }
+    return greatestFactor;
+  },
+
+  checkPrime: function(number) {
+    if (number < 2) {
+      return false;
+    }
+
+    for (var i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
   }
 }
