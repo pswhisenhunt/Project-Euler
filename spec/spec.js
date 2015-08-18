@@ -17,9 +17,16 @@ describe('Project Euler Challenges', function() {
   });
 
   describe('Largest Prime Factor', function() {
-    it('should retrun the largest prime factor of a given number, n', function() {
+    it('should return the largest prime factor of a given number, n', function() {
       expect(ProjectEuler.largestPrimeFactor(13195)).toEqual(29);
       expect(ProjectEuler.largestPrimeFactor(25)).toEqual(5);
+    });
+  });
+
+  describe('Largest Palindrome Product', function() {
+    it('should return the largest palindrome of the product 2 numbers given of a specified digit', function() {
+      expect(ProjectEuler.largestPalindromeProduct(2)).toEqual(9009);
+      expect(ProjectEuler.largestPalindromeProduct(3)).toEqual(90909);
     });
   });
 });

@@ -70,5 +70,35 @@ module.exports = {
     }
 
     return true;
+  },
+
+  largestPalindromeProduct: function(digits) {
+    var startNumber = '';
+    for (var i = 0; i < digits; i++) {
+      startNumber += '9';
+    }
+    startNumber = Number(startNumber);
+    for (var j = startNumber; j > 0; j--) {
+      var product = startNumber * j;
+      if (this.isPalindrome(product)) {
+        return product;
+      }
+    }
+  },
+
+  isPalindrome: function(product) {
+    // using built in methods, you can reverse and a string like so:
+    // var reversedProduct = product.toString().split("").reverse().join("");
+    // to gain a better understanding, I chose to do it by hand
+    product = product.toString();
+    var reversedProduct = '';
+    for (var i = product.length-1; i >= 0; i--) {
+      reversedProduct += product[i];
+    }
+    if (reversedProduct === product) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
