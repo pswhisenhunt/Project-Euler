@@ -62,13 +62,11 @@ module.exports = {
     if (number < 2) {
       return false;
     }
-
     for (var i = 2; i < number; i++) {
       if (number % i === 0) {
         return false;
       }
     }
-
     return true;
   },
 
@@ -102,7 +100,7 @@ module.exports = {
     }
   },
 
-  differenceOfSumOfSquares : function(number) {
+  differenceOfSumOfSquares: function(number) {
     var sumOfSquares = 0;
     var squareOfSum = 0;
     var sum = 0;
@@ -115,5 +113,24 @@ module.exports = {
     squareOfSum = sum * sum;
     difference = squareOfSum - sumOfSquares;
     return difference;
+  },
+
+  summationOfPrimes: function(number) {
+    var sumOfPrimesBelowNumber = 0;
+    for (var i = 0; i < number; i++) {
+      if(this.checkPrime(i)) {
+        sumOfPrimesBelowNumber += i;
+      }
+    }
+    return sumOfPrimesBelowNumber;
+  },
+
+  sumOfExponents: function(number) {
+    var sum = 0;
+    for (var i = 1; i <= number; i++) {
+      var exponent = Math.pow(i, i);
+      sum += exponent;
+    }
+    return sum;
   }
 }

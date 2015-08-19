@@ -36,4 +36,16 @@ describe('Project Euler Challenges', function() {
       expect(ProjectEuler.differenceOfSumOfSquares(100)).toEqual(25164150);
     });
   });
+
+  describe('Summation of primes', function() {
+    it('should return the sum of all primes below a given number', function() {
+      expect(ProjectEuler.summationOfPrimes(10)).toEqual(17)
+    });
+  });
+
+  describe('Sum of Exponents', function() {
+    it('should be given a number, n, and return the sum of each number to the power of itself up to n', function() {
+      expect(ProjectEuler.sumOfExponents(10)).toEqual(10405071317);
+    });
+  });
 });
